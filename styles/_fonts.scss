@@ -1,0 +1,44 @@
+/* Fonts imports */
+@font-face {
+  font-family: "Avenir Next LT W01 Condensed";
+src: url("./Fonts/33869979-5b35-4fed-831b-d47a15fc2384.woff2") format("woff2"),
+url("./Fonts/87141b08-88b3-4b7d-9593-f65b2b04e615.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next LT W01 Medium Cond";
+  src: url("./Fonts/c41ef769-1f86-49f7-8413-ba737e39810e.woff2") format("woff2"),
+      url("./Fonts/3f0a7e1c-611a-46d1-a033-1b45479ff69f.woff") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next LT W01 Demi Cond";
+  src: url("./Fonts/b7685a6f-f731-4069-920b-b81b365f185e.woff2") format("woff2"),
+      url("./Fonts/f4427400-5d2b-4f21-bd63-15da06e70684.woff") format("woff");
+}
+@font-face {
+  font-family: "Avenir Next LT W01 Bold Cond";
+  src: url("./Fonts/66039c64-be67-4488-9771-2ba3e9cc646e.woff2") format("woff2"),
+      url("./Fonts/1c68e51a-8221-4588-b806-410bf7467ff5.woff") format("woff");
+}
+@font-face{
+  font-family:"Avenir Next LT W01 Demi Cond I";
+  src:url("./Fonts/f6b0e14b-0e6f-453f-8423-bb801b8ad9db.woff2") format("woff2"),
+  url("./Fonts/fea3cb89-84a6-40ce-9b7d-cee483f236df.woff") format("woff");
+}
+.AvenirRegular {
+  font-family: "Avenir Next LT W01 Condensed";
+}
+
+.AvenirMedium {
+  font-family: "Avenir Next LT W01 Medium Cond";
+}
+.AvenirDemi{
+  font-family: "Avenir Next LT W01 Demi Cond";
+
+}
+.AvenirBold {
+  font-family: "Avenir Next LT W01 Bold Cond";
+}
+.AvenirItalic {
+  font-family:"Avenir Next LT W01 Demi Cond I";
+}
