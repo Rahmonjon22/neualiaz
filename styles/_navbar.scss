@@ -34,16 +34,17 @@
         align-items: center;
         flex-direction: row;
 
-        li {
+        .menu-item-has-children {
           margin: 0 25px;
           padding: 8px;
           border-radius: 10px;
 
           a {
-          display: flex;
-          //justify-content: center;
-          text-align: center;
-            font-size: var(--fs-300);
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: var(--fs-250);
             color: colors.$clr-pale-white;
             font-family: "Avenir Next LT W01 Demi Cond";
             text-transform: uppercase;
@@ -59,6 +60,12 @@
               transition: color .5s ease-out;
               color: colors.$clr-primary;
             }
+
+            .fa-angle-down {
+              align-self: center;
+              margin-left: 3px;
+            }
+
           }
 
           /// here submenu starts
@@ -70,21 +77,23 @@
             margin-top: 5px;
             min-width: 150px;
             border-radius: 10px;
+            padding: 20px 30px;
+            transition: all 2s ease-in-out;
 
             ul {
-              padding: 15px 0;
+              padding: 5px;
 
               li {
-                padding: 5px 15px;
+                padding: 5px 0px;
 
                 a {
                   color: colors.$clr-white;
-                  padding: 15px 0;
+                  font-size: var(--fs-250);
                 }
 
                 &:hover {
                   a {
-                    color: colors.$clr-primary;
+                    color: colors.$clr-black;
                   }
                 }
               }
@@ -92,6 +101,7 @@
           }
 
           &:hover .sub-menu {
+            transition: all 2s ease-in-out;
             display: block;
           }
 
@@ -100,7 +110,6 @@
         }
       }
     }
-
 
     .nav-right {
       .nav-btn {
@@ -117,7 +126,7 @@
           transition: color .5s ease-out;
           color: colors.$clr-black;
           font-family: "Avenir Next LT W01 Bold Cond";
-          font-size: var(--fs-300);
+          font-size: var(--fs-200);
         }
 
         &:hover {
@@ -129,5 +138,164 @@
         }
       }
     }
+
+    .mobile-menu-trigger {
+      // mobile menu trigger
+      display: none;
+    }
   }
+}
+
+.mobile-menu-head {
+  display: none
+}
+
+// Tablet & Mobile
+@media (max-width: 920px) {
+
+
+  .nav-header {
+    /*
+    background-image: url("../assets/images/bannerBg.jpg");
+     height: 100vh;
+     background-position: center;
+     background-repeat: no-repeat;
+      */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px;
+
+
+      .nav-center {
+        background-color: colors.$clr-primary;
+        padding: 10px;
+        position: absolute;
+        margin-top: 300px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: normal;
+        flex-direction: column;
+
+        .mobile-menu-head {
+          display: flex;
+          justify-content: space-between;
+          color: white;
+          margin-bottom: 25px;
+        }
+
+        .ul-orderedList {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+
+          .menu-item-has-children {
+            margin: 5px 4px;
+            padding: 8px;
+            border-radius: 10px;
+
+            a {
+              display: flex;
+              // justify-content: center;
+              align-items: flex-start;
+              text-align: start;
+              font-size: var(--fs-250);
+              color: colors.$clr-pale-white;
+              font-family: "Avenir Next LT W01 Demi Cond";
+              text-transform: uppercase;
+              -webkit-transition: color .5s ease-out;
+              -moz-transition: color .5s ease-out;
+              -o-transition: color .5s ease-out;
+              transition: color .5s ease-out;
+
+              &:hover {
+                -webkit-transition: color .5s ease-out;
+                -moz-transition: color .5s ease-out;
+                -o-transition: color .5s ease-out;
+                transition: color .5s ease-out;
+                color: colors.$clr-primary;
+              }
+
+              .fa-angle-down {
+                align-self: center;
+                margin-left: 3px;
+              }
+
+            }
+
+            /// here submenu starts
+            .sub-menu {
+              display: none;
+              position: absolute;
+              overflow: auto;
+              background-color: colors.$clr-btn-hover;
+              margin-top: 5px;
+              min-width: 150px;
+              border-radius: 10px;
+              padding: 20px 30px;
+              transition: all 2s ease-in-out;
+
+              ul {
+                padding: 5px;
+
+                li {
+                  padding: 5px 0px;
+
+                  a {
+                    color: colors.$clr-white;
+                    font-size: var(--fs-250);
+                  }
+
+                  &:hover {
+                    a {
+                      color: colors.$clr-black;
+                    }
+                  }
+                }
+              }
+            }
+
+            &:hover .sub-menu {
+              transition: all 2s ease-in-out;
+              display: block;
+            }
+
+            /// here submenu ends
+
+          }
+        }
+      }
+
+      .nav-right {
+        .nav-btn {
+          cursor: pointer;
+          -webkit-transition: background-color .5s ease-out;
+          -moz-transition: background-color .5s ease-out;
+          -o-transition: background-color .5s ease-out;
+          transition: background-color .5s ease-out;
+
+          a {
+            -webkit-transition: color .5s ease-out;
+            -moz-transition: color .5s ease-out;
+            -o-transition: color .5s ease-out;
+            transition: color .5s ease-out;
+            color: colors.$clr-black;
+            font-family: "Avenir Next LT W01 Bold Cond";
+            font-size: var(--fs-200);
+          }
+
+          &:hover {
+            background-color: colors.$clr-btn-hover;
+
+            a {
+              color: colors.$clr-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
