@@ -1,0 +1,75 @@
+@use "colors";
+@import "fonts";
+
+.typograpyColors {
+  height: 100vh;
+
+  .colors {
+    padding: 25px;
+    background-color: colors.$clr-white;
+  }
+
+  .typography {
+  padding: 25px;
+    background-color: colors.$clr-black;
+  }
+  .colors, .typography{
+    h1 {
+    font-family: "Avenir Next LT W01 Condensed";
+      color: colors.$clr-black;
+      font-size: var(--fs-900);
+    }
+    h2 {
+      font-family: "Avenir Next LT W01 Medium Cond";
+      color: colors.$clr-primary;
+      font-size: var(--fs-800);
+    }
+    h3 {
+      font-family:  "Avenir Next LT W01 Demi Cond";
+      color: colors.$clr-light-gray;
+      font-size: var(--fs-700);
+    }
+    h4 {
+      font-family: "Avenir Next LT W01 Bold Cond";
+      color: colors.$clr-vivid-blue;
+      font-size: var(--fs-600);
+    }
+    h5 {
+      font-family: "Avenir Next LT W01 Demi Cond I";
+      color: colors.$clr-dark-blue;
+      font-size: var(--fs-500);
+    }
+    p{
+      font-family: "Avenir Next LT W01 Condensed";
+      color: colors.$clr-bg-footer;
+      font-size: var(--fs-400);
+    }
+    label{
+      font-family: "Avenir Next LT W01 Condensed";
+      color: colors.$clr-dark-blue;
+      font-size: var(--fs-300);
+    }
+    button{
+      a{
+        font-family: "Avenir Next LT W01 Condensed";
+        color: colors.$clr-black;
+        font-size: var(--fs-500);
+      }
+    }
+
+
+  }
+}
+
+/*
+$clr-primary: #fff;
+$clr-vivid-yellow: hsl(65.7,74.8%,49.8%);
+$clr-secondary: hsl(221.6, 83.7%, 52%);
+$clr-pale-white: hsl(210, 100%, 98.8%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-light-gray: hsl(0, 0%, 94.9%);
+$clr-dark-blue: hsl(240, 3.3%, 11.8%);
+$clr-vivid-blue: hsl(216.6, 83.7%, 52%);
+$clr-black: hsl(0, 0%, 0%);
+$clr-bg-footer: hsl(208.8, 66.7%, 14.1%);
+*/
