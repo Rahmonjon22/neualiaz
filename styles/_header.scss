@@ -1,7 +1,85 @@
-.header-navbar {
-  background-image: url(../assets/images/bannerBg.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+@use "colors";
+@import "fonts";
+/*
+canvas {
+  display: block;
+  vertical-align: bottom;
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+}*/
+#particles-js{
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
 }
+
+.header {
+
+
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+    .header-text {
+      //background-color: red;
+      padding-right: 150px;
+
+      .header-sub-text {
+        font-family: "Avenir Next LT W01 Condensed";
+        color: colors.$clr-primary;
+        margin-bottom: 50px;
+      }
+
+      .header-text, .header-purpose-text {
+        font-family: "Avenir Next LT W01 Bold Cond";
+        color: colors.$clr-light-gray;
+        opacity: 0.8;
+      }
+
+      .header-text {
+        font-size: var(--fs-600);
+
+        span {
+          color: colors.$clr-primary;
+        }
+      }
+
+      .header-purpose-text {
+        margin-top: 10px;
+        font-family: "Avenir Next LT W01 Condensed";
+      }
+
+      .btn {
+        margin-top: 50px;
+        background-color: transparent;
+        border: 1px solid colors.$clr-primary;
+        transition: background-color .5s ease-in-out;
+        max-width: 250px;
+
+        a {
+          font-family: "Avenir Next LT W01 Bold Cond";
+          color: colors.$clr-primary;
+          transition: color .5s ease-in-out;
+        }
+
+        &:hover {
+          transition: background-color .5s ease-in-out;
+          background-color: colors.$clr-primary;
+
+          a {
+            color: colors.$clr-black;
+            transition: color .5s ease-in-out;
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
