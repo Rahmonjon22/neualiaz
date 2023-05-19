@@ -4,6 +4,7 @@
   display: block;
   justify-content: center;
   align-items: center;
+
   .footer-main-container {
     display: flex;
     justify-content: space-around;
@@ -62,12 +63,19 @@
 
     .footer-center {
       width: 150px;
+      overflow: hidden;
 
       .footer-logo {
         cursor: pointer;
         width: 100%;
         border-radius: 50%;
+        transition: transform 0.75s;
+      }
 
+      &:hover {
+        .footer-logo {
+          transform: scale(1.1);
+        }
       }
     }
 
@@ -96,7 +104,12 @@
         }
       }
     }
+
+    .footer-mobile-logo-container {
+      display: none
+    }
   }
+
   .footer-impressum-container {
     display: flex;
     width: 100%;
@@ -110,11 +123,93 @@
 
       a {
         color: colors.$clr-black;
-        font-size: var(--fs-300);
+        font-size: var(--fs-250);
         font-family: "Avenir Next LT W01 Demi Cond I";
         text-transform: capitalize;
         opacity: 0.7;
       }
     }
   }
+}
+
+/*responsive*/
+@media(max-width: 991px) {
+  .footer {
+    .footer-main-container {
+      justify-content: space-between;
+      padding: 30px 30px;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .footer {
+    .footer-main-container {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 30px 30px;
+      flex-direction: column;
+
+      .footer-left {
+
+        .footer-phone, .footer-email {
+          font-size: var(--fs-300);
+
+          a {
+            font-size: var(--fs-300);
+          }
+        }
+
+        .footer-address {
+          padding-top: 10px;
+
+          p {
+            font-size: var(--fs-300);
+          }
+        }
+
+      }
+
+      .footer-center {
+        display: none;
+      }
+
+      .footer-right {
+        margin-top: 15px;
+
+        p {
+          padding: 5px 0px;
+
+          a {
+            font-size: var(--fs-300);
+
+          }
+        }
+      }
+
+      .footer-mobile-logo-container {
+        display: flex;
+        width: 40%;
+
+        .footer-mobile-logo {
+          border-radius: 10%
+        }
+      }
+    }
+
+    .footer-impressum-container {
+      height: auto;
+      flex-direction: column;
+
+      div {
+        padding: 10px;
+
+        a {
+          font-size: var(--fs-300);
+
+        }
+      }
+    }
+  }
+
 }

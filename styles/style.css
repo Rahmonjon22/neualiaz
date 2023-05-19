@@ -94,68 +94,127 @@ canvas {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 
 .header .header-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   position: relative;
   z-index: 1;
 }
-.header .header-content .header-text {
-  padding-right: 150px;
-}
-.header .header-content .header-text .header-sub-text {
+.header .header-content .header-text-container .header-sub-text {
   font-family: "Avenir Next LT W01 Condensed";
   color: hsl(65.7, 74.8%, 49.8%);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  font-size: var(--fs-600);
 }
-.header .header-content .header-text .header-text, .header .header-content .header-text .header-purpose-text {
+.header .header-content .header-text-container .header-text, .header .header-content .header-text-container .header-purpose-text {
   font-family: "Avenir Next LT W01 Bold Cond";
   color: hsl(0, 0%, 94.9%);
   opacity: 0.8;
 }
-.header .header-content .header-text .header-text {
-  font-size: var(--fs-600);
+.header .header-content .header-text-container .header-text {
+  font-size: var(--fs-800);
 }
-.header .header-content .header-text .header-text span {
+.header .header-content .header-text-container .header-text span {
   color: hsl(65.7, 74.8%, 49.8%);
 }
-.header .header-content .header-text .header-purpose-text {
+.header .header-content .header-text-container .header-purpose-text {
   margin-top: 10px;
   font-family: "Avenir Next LT W01 Condensed";
+  font-size: var(--fs-500);
 }
-.header .header-content .header-text .btn {
+.header .header-content .header-text-container .btn {
   margin-top: 50px;
   background-color: transparent;
   border: 1px solid hsl(65.7, 74.8%, 49.8%);
   transition: background-color 0.5s ease-in-out;
   max-width: 250px;
 }
-.header .header-content .header-text .btn a {
+.header .header-content .header-text-container .btn a {
   font-family: "Avenir Next LT W01 Bold Cond";
   color: hsl(65.7, 74.8%, 49.8%);
   transition: color 0.5s ease-in-out;
 }
-.header .header-content .header-text .btn:hover {
+.header .header-content .header-text-container .btn:hover {
   transition: background-color 0.5s ease-in-out;
   background-color: hsl(65.7, 74.8%, 49.8%);
 }
-.header .header-content .header-text .btn:hover a {
+.header .header-content .header-text-container .btn:hover a {
   color: hsl(0, 0%, 0%);
   transition: color 0.5s ease-in-out;
 }
 
+/*responsive*/
+@media (max-width: 991px) {
+  .header .header-content {
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    margin-top: 150px;
+  }
+  .header .header-content .header-text-container {
+    padding: 0px 25px;
+  }
+  .header .header-content .header-text-container .header-sub-text {
+    font-family: "Avenir Next LT W01 Condensed";
+    color: hsl(65.7, 74.8%, 49.8%);
+    margin-bottom: 20px;
+    font-size: var(--fs-600);
+  }
+  .header .header-content .header-text-container .header-text, .header .header-content .header-text-container .header-purpose-text {
+    font-family: "Avenir Next LT W01 Bold Cond";
+    color: hsl(0, 0%, 94.9%);
+    opacity: 0.8;
+  }
+  .header .header-content .header-text-container .header-text {
+    font-size: var(--fs-800);
+  }
+  .header .header-content .header-text-container .header-text span {
+    color: hsl(65.7, 74.8%, 49.8%);
+  }
+  .header .header-content .header-text-container .header-purpose-text {
+    margin-top: 10px;
+    font-family: "Avenir Next LT W01 Condensed";
+    font-size: var(--fs-500);
+  }
+  .header .header-content .header-text-container .btn {
+    margin-top: 50px;
+    background-color: transparent;
+    border: 1px solid hsl(65.7, 74.8%, 49.8%);
+    transition: background-color 0.5s ease-in-out;
+    max-width: 250px;
+  }
+  .header .header-content .header-text-container .btn a {
+    font-family: "Avenir Next LT W01 Bold Cond";
+    color: hsl(65.7, 74.8%, 49.8%);
+    transition: color 0.5s ease-in-out;
+  }
+  .header .header-content .header-text-container .btn:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: hsl(65.7, 74.8%, 49.8%);
+  }
+  .header .header-content .header-text-container .btn:hover a {
+    color: hsl(0, 0%, 0%);
+    transition: color 0.5s ease-in-out;
+  }
+  .header .header-content .header-image {
+    display: none;
+  }
+}
 /* Color variables exported to style.scss*/
 /* Color variables exported to style.scss*/
 .container {
   max-width: 1600px;
   margin: auto;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .row {
@@ -183,7 +242,7 @@ a {
   width: 100%;
   padding: 15px;
   background-image: url("../assets/images/bannerBg.jpg");
-  height: 100vh;
+  height: 80vh;
 }
 
 .header .item-left {
@@ -232,7 +291,7 @@ a {
 }
 
 .header .menu > ul > li > a {
-  font-size: var(--fs-250);
+  font-size: var(--fs-300);
   font-weight: 500;
   color: hsl(0, 0%, 100%);
   position: relative;
@@ -266,7 +325,7 @@ a {
 .header .menu > ul > li .sub-menu > ul > li > a {
   display: inline-block;
   padding: 10px 0;
-  font-size: var(--fs-250);
+  font-size: var(--fs-300);
   color: #555555;
   transition: color 0.3s ease;
   text-decoration: none;
@@ -617,11 +676,16 @@ a {
 }
 .footer .footer-main-container .footer-center {
   width: 150px;
+  overflow: hidden;
 }
 .footer .footer-main-container .footer-center .footer-logo {
   cursor: pointer;
   width: 100%;
   border-radius: 50%;
+  transition: transform 0.75s;
+}
+.footer .footer-main-container .footer-center:hover .footer-logo {
+  transform: scale(1.1);
 }
 .footer .footer-main-container .footer-right h5 {
   font-size: var(--fs-400);
@@ -643,6 +707,9 @@ a {
 .footer .footer-main-container .footer-right p a:hover {
   color: hsl(65.7, 74.8%, 49.8%);
 }
+.footer .footer-main-container .footer-mobile-logo-container {
+  display: none;
+}
 .footer .footer-impressum-container {
   display: flex;
   width: 100%;
@@ -656,12 +723,68 @@ a {
 }
 .footer .footer-impressum-container div a {
   color: hsl(0, 0%, 0%);
-  font-size: var(--fs-300);
+  font-size: var(--fs-250);
   font-family: "Avenir Next LT W01 Demi Cond I";
   text-transform: capitalize;
   opacity: 0.7;
 }
 
+/*responsive*/
+@media (max-width: 991px) {
+  .footer .footer-main-container {
+    justify-content: space-between;
+    padding: 30px 30px;
+  }
+}
+@media (max-width: 500px) {
+  .footer .footer-main-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 30px;
+    flex-direction: column;
+  }
+  .footer .footer-main-container .footer-left .footer-phone, .footer .footer-main-container .footer-left .footer-email {
+    font-size: var(--fs-300);
+  }
+  .footer .footer-main-container .footer-left .footer-phone a, .footer .footer-main-container .footer-left .footer-email a {
+    font-size: var(--fs-300);
+  }
+  .footer .footer-main-container .footer-left .footer-address {
+    padding-top: 10px;
+  }
+  .footer .footer-main-container .footer-left .footer-address p {
+    font-size: var(--fs-300);
+  }
+  .footer .footer-main-container .footer-center {
+    display: none;
+  }
+  .footer .footer-main-container .footer-right {
+    margin-top: 15px;
+  }
+  .footer .footer-main-container .footer-right p {
+    padding: 5px 0px;
+  }
+  .footer .footer-main-container .footer-right p a {
+    font-size: var(--fs-300);
+  }
+  .footer .footer-main-container .footer-mobile-logo-container {
+    display: flex;
+    width: 40%;
+  }
+  .footer .footer-main-container .footer-mobile-logo-container .footer-mobile-logo {
+    border-radius: 10%;
+  }
+  .footer .footer-impressum-container {
+    height: auto;
+    flex-direction: column;
+  }
+  .footer .footer-impressum-container div {
+    padding: 10px;
+  }
+  .footer .footer-impressum-container div a {
+    font-size: var(--fs-300);
+  }
+}
 /* Color variables exported to style.scss*/
 /* Color variables exported to style.scss*/
 /* Fonts imports */
