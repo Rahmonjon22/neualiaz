@@ -393,16 +393,6 @@ a {
   color: hsl(65.7, 74.8%, 49.8%);
 }
 
-/* banner section */
-.banner-section {
-  background-image: url("../assets/images/bannerBg.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 700px;
-  width: 100%;
-  display: block;
-}
-
 .mobile-menu-head,
 .mobile-menu-trigger {
   display: none;
